@@ -1,4 +1,4 @@
-package se.haris.booklender.model;
+package se.haris.booklender.model.entity;
 
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
@@ -31,7 +31,7 @@ public class Book {
 
     private boolean available;
     private boolean reserved;
-    private int maxLoanDays;
+    private Integer maxLoanDays;
     private BigDecimal finePerDay;
     private String description;
 }

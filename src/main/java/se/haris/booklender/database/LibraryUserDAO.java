@@ -2,8 +2,14 @@ package se.haris.booklender.database;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import se.haris.booklender.model.LibraryUser;
+import org.springframework.data.repository.query.Param;
+import se.haris.booklender.model.entity.LibraryUser;
 
-public interface LibraryUserDAO extends JpaRepository<LibraryUserDAO,String> {
-    LibraryUser findByEmailIgnoringCase(String email);
+import java.util.Optional;
+
+public interface LibraryUserDAO extends JpaRepository<LibraryUser,String> {
+
+   @Query("SELECT u from LibraryUser u where UPPER(u.email) = UPPER(:email)")
+   Optional<LibraryUser> findByEmail (@Param("email")String email);
+
 }

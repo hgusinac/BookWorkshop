@@ -1,4 +1,4 @@
-package se.haris.booklender.model;
+package se.haris.booklender.model.entity;
 
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
@@ -26,7 +26,7 @@ public class LibraryUser {
     @GeneratedValue(generator = GENERATOR)
     @GenericGenerator(name = GENERATOR, strategy = UUID_GENERATOR)
     @Column(updatable = false)
-    private String userId;
+    private String id;
     private LocalDate regDate;
     private String name;
     @Column(unique = true)
