@@ -1,9 +1,6 @@
 package se.haris.booklender.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.loader.entity.UniqueEntityLoader;
 
@@ -20,6 +17,8 @@ import static se.haris.booklender.model.constants.EntityConstants.UUID_GENERATOR
 @Setter
 @Getter
 @NoArgsConstructor
+@ToString
+@EqualsAndHashCode
 @Entity
 public class LibraryUser {
 
