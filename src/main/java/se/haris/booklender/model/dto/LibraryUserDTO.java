@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import javax.persistence.Column;
 import java.time.LocalDate;
+import java.util.List;
 
 @Getter
 @Setter
@@ -16,4 +17,5 @@ public class LibraryUserDTO {
     private LocalDate regDate;
     private String name;
     private String email;
+    private List<LoanDTO>activeLoans;
 }

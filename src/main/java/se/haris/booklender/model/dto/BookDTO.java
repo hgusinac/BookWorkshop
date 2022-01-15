@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Getter
 @Setter
@@ -19,4 +20,5 @@ public class BookDTO {
     private Integer maxLoanDays;
     private BigDecimal finePerDay;
     private String description;
+    private List<LoanDTO> loanHistory;
 }

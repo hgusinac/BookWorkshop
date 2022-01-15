@@ -10,10 +10,10 @@ import java.util.List;
 public interface LoanDAO extends JpaRepository<Loan,String> {
 
     @Query("SELECT l FROM Loan l WHERE l.loanTaker.id = :userId")
-    List<Loan> findByUserId(@Param("userId") Integer userId);
+    List<Loan> findByUserId(@Param("userId") String userId);
 
     @Query("SELECT l FROM Loan l where l.book = :bookId")
-    List<Loan> findByBookId(@Param("bookId") Integer bookId);
+    List<Loan> findByBookId(@Param("bookId") String bookId);
 
     @Query("SELECT l FROM Loan l WHERE l.concluded = :concluded")
     List<Loan> findByConcludedStatus(@Param("concluded") boolean concluded);
