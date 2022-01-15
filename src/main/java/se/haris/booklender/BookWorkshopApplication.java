@@ -9,6 +9,8 @@ public class BookWorkshopApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(BookWorkshopApplication.class, args);
+        Loan loan = new Loan();
     }
+
 
 }
